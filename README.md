@@ -1,6 +1,6 @@
 # Ansible Role: Logstash
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-logstash.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-logstash)
+[![Build Status](https://travis-ci.org/Nikita-Stupin/ansible-role-logstash.svg?branch=master)](https://travis-ci.org/Nikita-Stupin/ansible-role-logstash)
 
 An Ansible Role that installs Logstash on RedHat/CentOS Debian/Ubuntu.
 
@@ -14,6 +14,7 @@ Though other methods are possible, this role is made to work with Elasticsearch 
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
+    logstash_version: "5.x"
     logstash_listen_port_beats: 5044
 
 The port over which Logstash will listen for beats.
@@ -62,8 +63,7 @@ If you are seeing high CPU usage from one of the `logstash` processes, and you'r
 
     - hosts: search
       roles:
-        - geerlingguy.elasticsearch
-        - geerlingguy.logstash
+        - meganuke.logstash
 
 ## License
 
@@ -71,4 +71,6 @@ MIT / BSD
 
 ## Author Information
 
-This role was created in 2014 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).
+This role was originally created in 2014 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).
+
+Development continues in 2017 by [Nikita Stupin](https://nikitastupin.name)
